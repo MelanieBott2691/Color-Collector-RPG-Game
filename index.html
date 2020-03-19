@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPG Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="container">
+    <h3>Opponent's Health <span id="opponent-health"></span></h3>
+    <div class="display-container text-white">
+        <!-- <img src="assets/images/paint_splat.jpg" alt="bgimg" style="width:100%"> -->
+        <div class="display-topleft container">
+            <p>Opponent Health</p>
+        </div>
+        <div class="display-bottomleft container">
+            <p>Your Health</p>
+        </div>
+        <div class="display-topright container"><button id="attack-button" onclick="attack()">Throw Now</button></div>
+
+        <h3>Your Health <span id="player-health"></span></h3>
+
+        <button id="attack-button" onclick="attack()">Hit Em'</button>
+        <button id="restart-button" hidden="true" onclick="restart()">Restart Game</button>
+        <h3 id="game-message"></h3>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>

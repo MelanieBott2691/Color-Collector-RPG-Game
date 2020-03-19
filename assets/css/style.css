@@ -1,0 +1,17 @@
+body {
+    background-image: url("assets/images/paint_splattered.png");
+}
+
+h3 {}
+
+button {}
+
+#player-health {}
+
+#opponent-health {}
+
+#attack-button {}
+
+#restart-button {}
+
+#game-message {}
