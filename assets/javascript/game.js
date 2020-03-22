@@ -1,12 +1,16 @@
+//leave for ongoing
 let player = {
     health: 100,
     power: 20
 }
 
 let opponent = {
-    health: 100,
-    power: 20
+    health: 180,
+    power: 30
 }
+
+
+//store org values for char
 
 const attack = () => {
     let attackButton = document.getElementById("attack-button");
@@ -20,6 +24,12 @@ const attack = () => {
     if (isGameOver(opponent.health)) {
         endGame("Player Won Fight");
         return;
+
+        function picture() {
+            var pic = "assets/images/red.jpg"
+            document.getElementById("bigpic").src = pic.replace('90x90', '225x225');
+
+        }
     }
 
     attackButton.disabled = true;
@@ -53,8 +63,8 @@ const isGameOver = (health) => {
 
 const restart = () => {
     let attackButton = document.getElementById("attack-button");
-    player.health = 100;
-    opponent.health = 100;
+    player.health = ;
+    opponent.health = ;
     document.getElementById("game-message").innerText = "";
     attackButton.disabled = false;
     attackButton.hidden = false;
@@ -67,6 +77,6 @@ const printToScreen = () => {
         opponent.health;
 
     document.getElementById("player-health").innerHTML =
-        opponent.health;
+        player.health;
 
 }
