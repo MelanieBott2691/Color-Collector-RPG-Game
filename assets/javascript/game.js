@@ -1,13 +1,45 @@
-//leave for ongoing
-let player = {
-    health: 100,
-    power: 20
+//character class for ongoing
+var charOne = {
+    name: "Red",
+    healthPoints: 180,
+    attackPower: 30,
+    counterAttackPower: 10,
+    maxHealth: 180
 }
 
-let opponent = {
-    health: 180,
-    power: 30
+var charTwo = {
+    name: "Blue",
+    healthPoints: 100,
+    attackPower: 20,
+    counterAttackPower: 5,
+    maxHealth: 100
 }
+
+var charThree = {
+    name: "Yellow",
+    healthPoints: 120,
+    attackPower: 10,
+    counterAttackPower: 10,
+    maxHealth: 120
+}
+
+var charFour = {
+    name: "Purple",
+    healthPoints: 140,
+    attackPower: 20,
+    counterAttackPower: 10,
+    maxHealth: 140
+}
+
+
+var firstPlayer = "";
+var secondPlayer = "";
+var selectedPlayer = false;
+
+firstPlayer = charOne;
+secondPlayer = charTwo;
+
+
 
 
 //store org values for char
@@ -17,11 +49,11 @@ const attack = () => {
     let restartButton = document.getElementById("restart-button");
     let gameMessage = document.getElementById("game-message");
 
-    let playerAttack = determineAttack(player.power);
-    opponent.health -= playerAttack;
+    let playerAttack = determineAttack(firstPlayer.attackPower);
+    secondPlayer.healthPoints -= playerAttack;
     printToScreen();
 
-    if (isGameOver(opponent.health)) {
+    if (isGameOver(secondPlayer.healthPoints)) {
         endGame("Player Won Fight");
         return;
 
@@ -36,11 +68,11 @@ const attack = () => {
     gameMessage.innerHTML = "Opponent is about to strike!"
 
     setTimeout(() => {
-        let opponentAttack = determineAttack(opponent.power);
-        player.health -= opponentAttack;
+        let opponentAttack = determineAttack(secondPlayer.attackPower);
+        firstPlayer.healthPoints -= opponentAttack;
         printToScreen();
 
-        if (isGameOver(player.health)) {
+        if (isGameOver(firstPlayer.healthPoints)) {
             endGame("Opponent Won Fight");
             return;
         }
@@ -63,8 +95,10 @@ const isGameOver = (health) => {
 
 const restart = () => {
     let attackButton = document.getElementById("attack-button");
-    player.health = 0;
-    opponent.health = 0;
+    firstPlayer = charOne;
+    firstPlayer.healthPoints = charOne.maxHealth;
+    secondPlayer = charTwo;
+    secondPlayer.healthPoints = charTwo.maxHealth;
     document.getElementById("game-message").innerText = "";
     attackButton.disabled = false;
     attackButton.hidden = false;
@@ -74,9 +108,9 @@ const restart = () => {
 
 const printToScreen = () => {
     document.getElementById("opponent-health").innerHTML =
-        opponent.health;
+        secondPlayer.healthPoints;
 
     document.getElementById("player-health").innerHTML =
-        player.health;
+        firstPlayer.healthPoints;
 
 }

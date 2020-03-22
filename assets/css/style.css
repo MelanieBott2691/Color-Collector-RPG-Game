@@ -17,6 +17,17 @@ body {
     text-align: center;
 }
 
+.container {
+    box-sizing: 400px 400px;
+}
+
+#myColor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    text-shadow: 8px 8px 8px 8px black;
+    text-align: center;
+}
+
 
 /* hover effect for characters */
 
@@ -26,11 +37,16 @@ body {
     animation: neonGreen 1.5s ease-in-out infinite alternate;
 }
 
-body {
-    background-image: url('assets/images/colorbackground.jpg');
+#image {
+    /* background-image: url('assets/images/colorbackground.jpg'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 80% 80%;
+}
+
+#image:before {
+    content: 'myTitle';
+    margin-top: 50%;
 }
 
 .background-image {

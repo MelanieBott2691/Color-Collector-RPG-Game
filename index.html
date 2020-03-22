@@ -13,29 +13,43 @@
 </head>
 <header>
     <h1 id="mainTitle">Paint Battle RPG</h1>
+    <!-- <img src="assets/images/colorbackground.jpg" alt="background picture" style="width: 100%" display="inline-block"> -->
 </header>
 
 <body>
-    <div class="container">
-        <img src="assets/images/colorbackground.jpg" alt="background picture" style="width: 100%" display="inline-block">
+    <div>
+        <!-- background-size: cover; background-size: cover; background-repeat: no-repeat;} -->
+        <!-- </style>  -->
 
-    </div>
-    <div class="container-headings">
+        <div class="container" style="background-image: url('assets/images/colorbackground.jpg'); background-attachment: fixed; background-size: cover; background-repeat: no-repeat;">
 
-        <h2>Opponent's Health <span id="opponent-health"></span></h2>
-        <h2>Your Health <span id="player-health"></span></h2>
+            <p id="myColor" height="9000px">Choose Your Color</p>
+        </div>
+        <div class="container restart">
+            <div class="row">
+                <div id="characters">
+                    <!-- selection sound effect -->
+                    <audio id="soundEffect" src="assets/sound_effects/select_sound.wav"></audio>
+                </div>
+            </div>
+        </div>
+        <div class="container headings">
 
-    </div>
-    <div class="display-container">
-        <div class="display-topright container"><button id="attack-button" onclick="attack()">Throw Now</button></div>
+            <h2>Opponent's Health <span id="opponent-health"></span></h2>
+            <h2>Your Health <span id="player-health"></span></h2>
 
-        <button id="restart-button" hidden="true" onclick="restart()">Restart Game</button>
-        <h2 id="game-message"></h2>
-    </div>
+        </div>
+        <div class="display-container">
+            <div class="display-topright container"><button id="attack-button" onclick="attack()">Throw Now</button></div>
+
+            <button id="restart-button" hidden="true" onclick="restart()">Restart Game</button>
+            <h2 id="game-message"></h2>
+        </div>
     </div>
 
 
     <script src="assets/javascript/game.js"></script>
+    </div>
 </body>
 <footer>
     <div class="footer">
