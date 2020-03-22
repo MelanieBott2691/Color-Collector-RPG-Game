@@ -1,8 +1,75 @@
-body {
-    background-image: url("assets/images/paint_splattered.png");
+#RPGTitle {
+    color: black;
+    text-align: center;
+    font-weight: 800;
+    font-size: 80px;
 }
 
-h2 {}
+body {
+    background-color: rgb(247, 241, 234);
+}
+
+#mainTitle {
+    font-family: Death-Star, sans-serif;
+    color: rgb(36, 170, 53);
+    font-size: 105px;
+    text-shadow: 7px 7px 7px black;
+    text-align: center;
+}
+
+
+/* hover effect for characters */
+
+.character:hover {
+    -webkit-animation: neonGreen 1.5s ease-in-out infinite alternate;
+    -moz-animation: neonGreen 1.5s ease-in-out infinite alternate;
+    animation: neonGreen 1.5s ease-in-out infinite alternate;
+}
+
+body {
+    background-image: url('assets/images/colorbackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 80% 80%;
+}
+
+.background-image {
+    height: 80%;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.container-headings {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#display-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+img.footer {}
 
 button {}
 

@@ -11,23 +11,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<header>
+    <h1 id="mainTitle">Paint Battle RPG</h1>
+</header>
 
-<body class="container">
-    <h2>Opponent's Health <span id="opponent-health"></span></h2>
-    <div class="display-container text-white">
-        <!-- <img src="assets/images/paint_splat.jpg" alt="bgimg" style="width:100%"> -->
+<body>
+    <div class="container">
+        <img src="assets/images/colorbackground.jpg" alt="background picture" style="width: 100%" display="inline-block">
 
-        <div class="display-topright container"><button id="attack-button" onclick="attack()">Throw Now</button></div>
+    </div>
+    <div class="container-headings">
 
+        <h2>Opponent's Health <span id="opponent-health"></span></h2>
         <h2>Your Health <span id="player-health"></span></h2>
 
+    </div>
+    <div class="display-container">
+        <div class="display-topright container"><button id="attack-button" onclick="attack()">Throw Now</button></div>
 
         <button id="restart-button" hidden="true" onclick="restart()">Restart Game</button>
         <h2 id="game-message"></h2>
     </div>
-    <img id="bigpic" src="bigpic">
-    <button onclick="picture()"></button>
-    <script src="assets/javascript/game2.js"></script>
+    </div>
+
+
+    <script src="assets/javascript/game.js"></script>
 </body>
+<footer>
+    <div class="footer">
+
+    </div>
+</footer>
 
 </html>

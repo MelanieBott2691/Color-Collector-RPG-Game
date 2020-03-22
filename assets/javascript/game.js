@@ -63,8 +63,8 @@ const isGameOver = (health) => {
 
 const restart = () => {
     let attackButton = document.getElementById("attack-button");
-    player.health = ;
-    opponent.health = ;
+    player.health = 0;
+    opponent.health = 0;
     document.getElementById("game-message").innerText = "";
     attackButton.disabled = false;
     attackButton.hidden = false;
