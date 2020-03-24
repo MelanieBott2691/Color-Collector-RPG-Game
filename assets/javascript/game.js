@@ -107,10 +107,31 @@ const restart = () => {
 }
 
 const printToScreen = () => {
-    document.getElementById("opponent-health").innerHTML =
-        secondPlayer.healthPoints;
+        document.getElementById("opponent-health").innerHTML =
+            secondPlayer.healthPoints;
 
-    document.getElementById("player-health").innerHTML =
-        firstPlayer.healthPoints;
+        document.getElementById("player-health").innerHTML =
+            firstPlayer.healthPoints;
 
+    }
+    //character choices
+function myFunction() {
+    document.getElementById("charSelect").style.backgroundImage = src = "assets/images/red_crayon.jpg";
 }
+var character = document.getElementById('character');
+var container = document.getElementById('container');
+
+var left = 0;
+
+function anim(e) {
+
+    if (e.keyCode == 39) {
+        left++;
+
+
+    }
+    if (e.keyCode == 37) {
+
+    }
+}
+document.onkeydown = anim;

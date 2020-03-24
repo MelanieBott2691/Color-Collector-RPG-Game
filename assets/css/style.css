@@ -29,6 +29,50 @@ body {
 }
 
 
+/* //containers holding characters */
+
+#container {
+    height: 400px;
+    width: 600px;
+    outline: 1px solid black;
+    position: relative;
+}
+
+#character {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    outline: 1px solid black;
+    background-image: url(/assets/images/red_crayon.jpg);
+    left: 0;
+}
+
+#charSelect {
+    /* background-image: url(assets/images/red_crayon.jpg); */
+    /* background-image: url(/assets/images/red_crayon.jpg); */
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    /* //height and width of image  */
+    height: 50px;
+    width: 100px;
+    border: 1px solid red:
+}
+
+button span {
+    display: none:
+}
+
+.charContainer {
+    display: inline-block;
+    border: solid 4px black;
+    width: 900px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-origin: solid 4px black;
+    border-radius: 7px;
+}
+
+
 /* hover effect for characters */
 
 .character:hover {

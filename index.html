@@ -12,11 +12,44 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <header>
-    <h1 id="mainTitle">Paint Battle RPG</h1>
+    <h1 id="mainTitle">Color Battle RPG</h1>
     <!-- <img src="assets/images/colorbackground.jpg" alt="background picture" style="width: 100%" display="inline-block"> -->
 </header>
 
 <body>
+    <section class="character-container">
+        <h3>Select Character</h3>
+        <section class="battle-area">
+            <!-- character selection -->
+
+            <!-- player one red  -->
+            <div class="row">
+                <div class="column">
+                    <img src="assets/images/red_crayon.jpg" alt="red crayon" width="150px" height="180px">
+                </div>
+                <!-- player two blue -->
+                <div class="column">
+                    <img src="assets/images/blue_crayon.jpg" alt="blue crayon" width="150px" height="180px">
+                </div>
+                <!-- player three yellow -->
+                <div class="column">
+                    <img src="assets/images/yellow_crayon.jpg" alt="yellow crayon" width="150px" height="180px">
+                </div>
+
+                <!-- player four purple -->
+                <div class="column">
+                    <img src="assets/images/purple_crayon.jpg" alt="purple crayon" width="150px" height="180px">
+                </div>
+
+
+
+
+
+
+
+
+        </section>
+    </section>
     <div>
         <!-- background-size: cover; background-size: cover; background-repeat: no-repeat;} -->
         <!-- </style>  -->
@@ -46,7 +79,26 @@
             <h2 id="game-message"></h2>
         </div>
     </div>
+    <!-- //character container -->
+    <div id="container">
+        <div id="character">
+            <!-- <button type="reset" title="In some browsers, this appears as a pic"><span> Cancel</span></button> -->
+            <button id="charSelect" onclick="myFunction()">Click Here For Character</button>
+        </div>
+    </div>
 
+
+    <!-- battle area -->
+    <div id="battle">
+    </div>
+    <script type="text/template" id="charTemp">
+        <div class="charContainer charClick <%=background %>" data-char-index="<%= index %>">
+            <p id="charSelect" onclick="myFunction()">Click to select player</p>
+            <p>HP:
+                <%= char.healthPoints %>
+            </p>
+        </div>
+    </script>
 
     <script src="assets/javascript/game.js"></script>
     </div>
